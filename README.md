@@ -21,6 +21,10 @@
       - [Thin Client + PCIe Network Card (DIY network appliance)](#thin-client--pcie-network-card-diy-network-appliance)
       - [PCIe Network Card](#pcie-network-card)
     - [Managed wired network switch](#managed-wired-network-switch)
+  - [Installing \& configuring OpenWrt](#installing--configuring-openwrt)
+    - [Basic setup: Wi-Fi](#basic-setup-wi-fi-1)
+    - [Deluxe setup: Wi-Fi and wired network](#deluxe-setup-wi-fi-and-wired-network-1)
+    - [Advanced setup: Wi-Fi and wired network with advanced networking](#advanced-setup-wi-fi-and-wired-network-with-advanced-networking-1)
 
 This guide describes deploying an advanced home wireless network with improved security, ease of management, and functionality using open source software and low cost hardware.
 
@@ -66,6 +70,7 @@ The number of components in your system depends on your desired functionality an
 The Basic setup is for a home with all client devices connecting wirelessly and no wired ethernet network cabling.
 
 Functionality
+- < 500 Mbps internet connection
 - 1 or more Wi-Fi access points connected wirelessly forming single network
 - Multiple segmented networks for improved security
 - VPN remote access
@@ -82,7 +87,7 @@ Functionality
 - Multiple Wi-Fi access points connected with wired ethernet network
 - Multiple segmented networks for improved security
 - VPN remote access
-- Wired ethernet networking
+- Wired ethernet networking (1 Gbps)
 
 Components
 - Routing & Firewall: **OpenWrt** compatible Wi-Fi router
@@ -90,9 +95,10 @@ Components
 - Wired networks: Managed wired ethernet network switch connected to Wi-Fi router and client devices (PCs)
 
 ### Advanced setup: Wi-Fi and wired network with advanced networking
-The Advanced setup uses Deluxe setup and uses has more powerful dedicated hardware for advanced routing & firewall functionality, and is for a home with multiple client devices connecting wirelessly and with wired ethernet network, and requires Cat5e or better wired ethernet network cabling. 
+The Advanced setup uses thhe Deluxe setup as a base and uses has more powerful dedicated hardware for faster speeds, advanced routing & firewall functionality, and is for a home with multiple client devices connecting wirelessly and with wired ethernet network, and requires Cat5e or better wired ethernet network cabling. 
 
 Functionality
+- 500+ Mbps internet connection
 - Multiple Wi-Fi access points connected with wired ethernet network
 - Multiple segmented networks for improved security with advanced rules
 - VPN remote access
@@ -117,7 +123,8 @@ OpenWrt supports features like
 #### Hardware choices
 OpenWrt runs on some Wi-Fi routers. Below are  models with good OpenWrt support as of 2023:
 
-- [Belkin RT3200](https://openwrt.org/toh/linksys/e8450) Wi-Fi 6 (802.11ax) 3200 Mbps max
+- [Dynalink DL-WRX36](https://openwrt.org/toh/dynalink/dl-wrx36) Wi-Fi 6 (802.11ax) 3600 Mbps max
+- [Linksys E8450/Belkin RT3200](https://openwrt.org/toh/linksys/e8450) Wi-Fi 6 (802.11ax) 3200 Mbps max
 - [Netgear R7800 Nighthawk X4S](https://openwrt.org/toh/netgear/r7800) Wi-Fi 5 (802.11ac) 2600 Mbps max
 
 For a larger home with multiple rooms and multiple client devices, it's better to use multiple Wi-Fi cheaper access points than deploying a single more expensive Wi-Fi access point, as the wireless signal quality is greatly impacted by walls.
@@ -204,3 +211,31 @@ Popular network card choices compatible with pfSense and OPNsense:
 ### Managed wired network switch
 A wired network switch is to used in homes to connect different PCs together into a network using wired ethernet cables. Wired network switches come in either unmanaged or managed versions. An unmanaged wired network switch supports a single network for all connected wired devices, while a managed wired network switch can support logically isolated networks even though the physical wired ethernet cables are all connected to a single device.  
 A wired network switch is used in my Deluxe and Advanced setups, and is not needed in my basic setup. A managed wired network switch that supports VLAN tagging is required if you want to create isolated networks like a guest Wi-Fi network and connect multiple Wi-Fi Access Points together using wired ethernet cables for the best performance.  
+
+## Installing & configuring OpenWrt
+For guidelines on how to install and configure a OpenWrt on a Wi-Fi router, see guides below.
+
+### Basic setup: Wi-Fi
+The below guides walks through a typical home Wi-Fi network setup.
+
+1. [Installing OpenWrt on a Wi-Fi router](Installing-OpenWrt-on-a-Wi-Fi-router.md)
+2. Configuring OpenWrt with a basic Wi-Fi network
+3. Configuring OpenWrt firewall
+4. Configuring OpenWrt with additional Guest Wi-Fi network
+5. Configuring a second OpenWrt Wi-Fi Access Point connected wirelessly
+
+### Deluxe setup: Wi-Fi and wired network
+In addition to following the steps in the basic setup, the below guides for deluxe setup supports both Wi-Fi and wired ethernet cables.
+
+1. Configuring a second OpenWrt Wi-Fi Access Point connected by wired ethernet cable
+2. Configuring managed wired network switch with VLAN tagging to connect multiple Wi-Fi Access Points with multiple logical networks (ex: home & guest network).
+
+### Advanced setup: Wi-Fi and wired network with advanced networking
+Instead of following basic and deluxe setup guides, 
+
+1. Installing OPNsense on a PC
+2. Configuring OPNsense with a basic wired network
+3. Configuring OpenWrt Wi-Fi Access Point to use with OPNsense
+4. Configuring OPNsense advanced firewall
+5. Configuring OPNsense with additional Guest Wi-Fi network
+6. Configuring managed wired network switch
