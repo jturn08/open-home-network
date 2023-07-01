@@ -1,4 +1,20 @@
 # Ultra-fast Local Network: 5 MB per second transfers with 40 Gbps point-to-point wired networking
+- [Ultra-fast Local Network: 5 MB per second transfers with 40 Gbps point-to-point wired networking](#ultra-fast-local-network-5-mb-per-second-transfers-with-40-gbps-point-to-point-wired-networking)
+  - [Hardware recommendations](#hardware-recommendations)
+    - [40 Gbps (5 Megabytes per second)](#40-gbps-5-megabytes-per-second)
+    - [10 Gbps (1.25 Megabytes per second)](#10-gbps-125-megabytes-per-second)
+  - [Installing Mellanox drivers and configuration](#installing-mellanox-drivers-and-configuration)
+    - [Linux](#linux)
+    - [Windows 10/11](#windows-1011)
+  - [Configuration](#configuration)
+    - [Linux](#linux-1)
+    - [Windows](#windows)
+  - [Connect hardware cables](#connect-hardware-cables)
+  - [Benchmarking network performance](#benchmarking-network-performance)
+  - [Tuning for performance](#tuning-for-performance)
+    - [Linux](#linux-2)
+    - [Windows 10/11](#windows-1011-1)
+
 A typical wired Ethernet network runs at 1 Gbps (Gigabit per second), equivalent to 125 Megabytes transfer per second. By upgrading to specialized network adapter hardware and cables, you can setup a wired network to transfer files at 10x (10 Gbps) or 40x (40 Gbps) speed of a 1 Gbps network between 2 or 3 desktop PCs for under $50 per device. No network switch is required, as PCs are connected directly to each other with a static IP addresses.  
 
 ![Image](Ultra-fast-network-2023.jpeg)
