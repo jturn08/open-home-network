@@ -93,16 +93,16 @@ The Linux kernel in your distribution likely already includes Mellanox support. 
    
    *Mellanox VPI cards support either InfiniBand or Ethernet modes, so you may need to change the card configuration to Ethernet mode.*  
 
-   Ethernet mode:
+   Ethernet mode:  
    ![Image](Ultra-fast-wired_Device_Manager_HP_Ethernet.jpg)
 
-   InfiniBand mode:
+   InfiniBand mode:  
    ![Image](Ultra-fast-wired_Device_Manager_HP_IPoIB.jpg)
 
 1. Configure the Mellanox adapter to use a static local IPv4 address since there is no DHCPv4 server because you're connecting 2 computers directly without a router or DHCP server.  
    1. Open **Network Connections** settings, find the Mellanox network adapter, then right click and select "**Properties**".
    2. In **Ethernet Properties** window, find and select **Internet Protocol Version 4 (TCP/IPv4)**, then select **Properties** button.
-   3. Select "**Use the following IP address**:" and enter your local IPv4 address (ex: `10.10.10.2`), Subnet mask (ex: `255.255.255.0`), and leave Default gateway blank.
+   3. Select "**Use the following IP address**:" and enter your local IPv4 address (ex: `10.10.10.2`), Subnet mask (ex: `255.255.255.0`), and leave Default gateway blank.  
    ![Image](Ultra-fast-wired_Network_Connections_static_IPv4.jpg)
 2. Edit `hosts` file on each PC.   
    Open `C:\Windows\System32\drivers\etc\hosts` file in text editor. At the end of the file, add new lines for each device. Ex:   
@@ -164,5 +164,5 @@ Accepted connection from 10.10.8.13, port 56338
 1. Configure Mellanox adapter's maximum size of a frame (packet) to `9014`. 
    1. Open **Network Connections** settings, find the Mellanox network adapter, then right click and select "**Properties**".
    2. Select **Configure** button
-   3. In the adapter properties window, select **Advanced** tab, then select "**Jumbo Packet**", and then change value to `9014` instead of the default `1514`.
+   3. In the adapter properties window, select **Advanced** tab, then select "**Jumbo Packet**", and then change value to `9014` instead of the default `1514`.  
    ![Image](Ultra-fast-wired_Windows_Adapter_Properties_Jumbo_Packet.jpg)
