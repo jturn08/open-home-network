@@ -26,6 +26,7 @@
     - [Essential setup: Wi-Fi](#essential-setup-wi-fi-1)
     - [Deluxe setup: Wi-Fi and wired network](#deluxe-setup-wi-fi-and-wired-network-1)
     - [Advanced setup: Wi-Fi and wired network with advanced networking](#advanced-setup-wi-fi-and-wired-network-with-advanced-networking-1)
+    - [Ultra-fast Local Network setup: 10+ Gbps point-to-point wired networking](#ultra-fast-local-network-setup-10-gbps-point-to-point-wired-networking-1)
 
 This guide describes deploying an advanced home wireless network with improved security, ease of management, and functionality using open source software and low cost hardware.
 
@@ -107,13 +108,14 @@ Components
 - Wired networks: Managed wired ethernet network switch connected to Wi-Fi router and client devices (PCs)
 
 #### Ultra-fast Local Network setup: 10+ Gbps point-to-point wired networking
-The Ultra-fast Local Network setup is a low-cost way of adding datacenter-grade 10+ Gbps point-to-point wired network connectivity between 2 or 3 desktop PCs, which is useful for boosting speed of data-intensive applications like video editing with files stored remotely on a Network Attached Storage (NAS) server. The Ultra-fast Local Network setup can be added on top of Essential, Deluxe or Advanced setups.
+The Ultra-fast Local Network setup is a low-cost way of adding datacenter-grade 40 Gbps point-to-point wired network connectivity between 2 or 3 desktop PCs, 
+enabling file transfers at 40x (40 Gbps) speed of a 1 Gbps network between 2 or 3 desktop PCs for under $50 per device. This is useful for boosting speed of data-intensive applications like video editing with files stored remotely on a Network Attached Storage (NAS) server. The Ultra-fast Local Network setup can be added on top of Essential, Deluxe or Advanced setups.
 
 Functionality (in addition to Basic, Deluxe, or Advanced setup)
-- 10+ Gbps ultra-fast point-to-point wired network between 2 or 3 desktop PCs, that's 10x faster than a typical 1 Gbps wired network.
+- 40 Gbps ultra-fast point-to-point wired network between 2 or 3 desktop PCs, that's 10x faster than a typical 1 Gbps wired network.
 
 Components
-- 10+ Gbps network adapter
+- 40 Gbps network adapter
 - Network cable (Cat6 ethernet, Direct Attached Copper (DAC) cable, or fiber optic cable + fiber transceiver)
 - No network switch required, as PCs are connected directly to each other.
 
@@ -202,7 +204,7 @@ Thin clients are low power office PCs originally designed for remote desktop use
 
 Popular thin-client choices:
 - HP T730, T620 plus, T610 plus thin client with low profile PCIe 2.0 x4 expansion slot
-- Dell Wyse 5070 Extended, Dell Wyse 5060 Extended thin client with low profile PCIe 2.0 x4 expansion slot
+- Dell Wyse 5070 Extended, 5060 Extended thin client with low profile PCIe 2.0 x4 expansion slot
 - Fujitsu Futuro S930, S920, S900 thin client with low profile PCIe 2.0 x4 expansion slot
 
 #### PCIe Network Adapter Card
@@ -229,7 +231,7 @@ The below guides walks through a typical home Wi-Fi network setup.
 1. [Installing OpenWrt on a Wi-Fi router](Installing-OpenWrt-on-a-Wi-Fi-router.md)
 2. [Configuring OpenWrt with an essential Wi-Fi network](Configuring-OpenWrt-with-essential-Wi-Fi-network.md)
 3. Configuring OpenWrt with additional Guest Wi-Fi network
-4. Configuring a second OpenWrt Wi-Fi Access Point connected wirelessly for greater Wi-Fi signal range
+4. [Configuring a second OpenWrt device as Wi-Fi network bridge (Wi-Fi Repeater) for greater Wi-Fi signal range](https://openwrt.org/docs/guide-user/network/wifi/atheroswds)
 
 ### Deluxe setup: Wi-Fi and wired network
 In addition to following the steps in the essential setup, the below guides for deluxe setup supports both Wi-Fi and wired ethernet cables.
@@ -246,3 +248,8 @@ Instead of following essential and deluxe setup guides,
 4. Configuring OPNsense advanced firewall
 5. Configuring OPNsense with additional Guest Wi-Fi network
 6. Configuring managed wired network switch
+
+### Ultra-fast Local Network setup: 10+ Gbps point-to-point wired networking
+In addition to following the steps in the Essential, Deluxe, or Advanced setup, follow the guides below.
+
+1. [Ultra-fast Local Network: 5 MB per second transfers with 40 Gbps point-to-point wired networking](Ultra-fast-p2p-Wired-Local-Network.md)
