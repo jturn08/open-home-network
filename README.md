@@ -11,7 +11,7 @@
     - [Essential setup: Wi-Fi](#essential-setup-wi-fi)
     - [Deluxe setup: Wi-Fi and wired network](#deluxe-setup-wi-fi-and-wired-network)
     - [Advanced setup: Wi-Fi and wired network with advanced networking](#advanced-setup-wi-fi-and-wired-network-with-advanced-networking)
-      - [Ultra-fast Local Network setup: 10+ Gbps point-to-point wired networking](#ultra-fast-local-network-setup-10-gbps-point-to-point-wired-networking)
+      - [Ultra-fast Local Network setup: 5 GB per second transfers with 40 Gbps point-to-point wired network](#ultra-fast-local-network-setup-5-gb-per-second-transfers-with-40-gbps-point-to-point-wired-network)
   - [Software \& Hardware](#software--hardware-1)
     - [OpenWrt](#openwrt)
       - [Hardware choices](#hardware-choices)
@@ -26,7 +26,6 @@
     - [Essential setup: Wi-Fi](#essential-setup-wi-fi-1)
     - [Deluxe setup: Wi-Fi and wired network](#deluxe-setup-wi-fi-and-wired-network-1)
     - [Advanced setup: Wi-Fi and wired network with advanced networking](#advanced-setup-wi-fi-and-wired-network-with-advanced-networking-1)
-    - [Ultra-fast Local Network setup: 10+ Gbps point-to-point wired networking](#ultra-fast-local-network-setup-10-gbps-point-to-point-wired-networking-1)
 
 This guide describes deploying an advanced home wireless network with improved security, ease of management, and functionality using open source software and low cost hardware.
 
@@ -107,12 +106,11 @@ Components
 - Wi-Fi Access Points: **OpenWrt** compatible Wi-Fi router
 - Wired networks: Managed wired ethernet network switch connected to Wi-Fi router and client devices (PCs)
 
-#### Ultra-fast Local Network setup: 10+ Gbps point-to-point wired networking
-The Ultra-fast Local Network setup is a low-cost way of adding datacenter-grade 40 Gbps point-to-point wired network connectivity between 2 or 3 desktop PCs, 
-enabling file transfers at 40x (40 Gbps) speed of a 1 Gbps network between 2 or 3 desktop PCs for under $50 per device. This is useful for boosting speed of data-intensive applications like video editing with files stored remotely on a Network Attached Storage (NAS) server. The Ultra-fast Local Network setup can be added on top of Essential, Deluxe or Advanced setups.
+#### Ultra-fast Local Network setup: 5 GB per second transfers with 40 Gbps point-to-point wired network
+The Ultra-fast Local Network setup is an optional add-on to a Basic, Deluxe, or Advanced setup. It's a low-cost way of adding datacenter-grade 40 Gbps point-to-point wired network connectivity between 2 or 3 desktop PCs, enabling file transfers at 40x faster speed than a 1 Gbps network between 2 or 3 desktop PCs for under $50 per PC. This is useful for boosting speed of data-intensive applications like video editing with files stored remotely on a Network Attached Storage (NAS) server. The Ultra-fast Local Network setup can be added on top of Essential, Deluxe or Advanced setups.
 
-Functionality (in addition to Basic, Deluxe, or Advanced setup)
-- 40 Gbps ultra-fast point-to-point wired network between 2 or 3 desktop PCs, that's 10x faster than a typical 1 Gbps wired network.
+Functionality 
+- 5 GB per second transfers with 40 Gbps ultra-fast point-to-point wired network between 2 or 3 desktop PCs, that's 40x faster than a typical 1 Gbps wired network.
 
 Components
 - 40 Gbps network adapter
@@ -249,7 +247,5 @@ Instead of following essential and deluxe setup guides,
 5. Configuring OPNsense with additional Guest Wi-Fi network
 6. Configuring managed wired network switch
 
-### Ultra-fast Local Network setup: 10+ Gbps point-to-point wired networking
-In addition to following the steps in the Essential, Deluxe, or Advanced setup, follow the guides below.
-
-1. [Ultra-fast Local Network: 5 MB per second transfers with 40 Gbps point-to-point wired networking](Ultra-fast-p2p-Wired-Local-Network.md)
+Optional:  
+1. [Ultra-fast Local Network: 5 GB per second transfers with 40 Gbps point-to-point wired networking](Ultra-fast-p2p-Wired-Local-Network.md)

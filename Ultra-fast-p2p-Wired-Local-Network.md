@@ -1,8 +1,8 @@
-# Ultra-fast Local Network: 5 MB per second transfers with 40 Gbps point-to-point wired networking
-- [Ultra-fast Local Network: 5 MB per second transfers with 40 Gbps point-to-point wired networking](#ultra-fast-local-network-5-mb-per-second-transfers-with-40-gbps-point-to-point-wired-networking)
+# Ultra-fast Local Network: 5 GB per second transfers with 40 Gbps point-to-point wired networking
+- [Ultra-fast Local Network: 5 GB per second transfers with 40 Gbps point-to-point wired networking](#ultra-fast-local-network-5-gb-per-second-transfers-with-40-gbps-point-to-point-wired-networking)
   - [Hardware recommendations](#hardware-recommendations)
-    - [40 Gbps (5 Megabytes per second)](#40-gbps-5-megabytes-per-second)
-    - [10 Gbps (1.25 Megabytes per second)](#10-gbps-125-megabytes-per-second)
+    - [40 Gbps (5 Gigabytes per second)](#40-gbps-5-gigabytes-per-second)
+    - [10 Gbps (1.25 Gigabytes per second)](#10-gbps-125-gigabytes-per-second)
   - [Installing Mellanox drivers and configuration](#installing-mellanox-drivers-and-configuration)
     - [Linux](#linux)
     - [Windows 10/11](#windows-1011)
@@ -15,7 +15,7 @@
     - [Linux](#linux-2)
     - [Windows 10/11](#windows-1011-1)
 
-A typical wired Ethernet network runs at 1 Gbps (Gigabit per second), equivalent to 125 Megabytes transfer per second. By upgrading to specialized network adapter hardware and cables, you can setup a wired network to transfer files at 10x (10 Gbps) or 40x (40 Gbps) speed of a 1 Gbps network between 2 or 3 desktop PCs for under $50 per device. No network switch is required, as PCs are connected directly to each other with a static IP addresses.  
+A typical wired Ethernet network runs at 1 Gbps (Gigabit per second), equivalent to 125 Megabytes transfer per second. By upgrading to specialized network adapter hardware and cables, you can setup a wired network to transfer files at 40x faster speed than a 1 Gbps network between 2 or 3 desktop PCs for under $50 per PC. No network switch is required, as PCs are connected directly to each other with a static IP addresses.  
 
 ![Image](Ultra-fast-network-2023.jpeg)
 
@@ -23,7 +23,7 @@ A typical wired Ethernet network runs at 1 Gbps (Gigabit per second), equivalent
 Most desktop PCs produced in the last decade include a built-in 1 Gbps RJ45 LAN port commonly known as Gigabit Ethernet, 1 GbE, or 1000BASE-T. As of 2023, some newer high-end PCs include a built-in 2.5 GbE LAN port that supports transfers up to 2.5 Gbps (Gigabit per second).  
 To transfer files at 40x speed of a 1 Gbps network, you'll need to upgrade to specialized network adapter hardware and cables. The lowest cost options start at under $50 for each device.  
 
-### 40 Gbps (5 Megabytes per second)
+### 40 Gbps (5 Gigabytes per second)
 PC requirements:
  - Windows 10/11 or Linux desktop PC with available PCIe 3.0 (PCI Express) x16 or PCIe 3.0 x8 physical slot and at least PCIe 3.0 x4 electrical connection. 
    - Mellanox network adapters designed for PCIe x8 cards will work in a PCIe x4 slot, but with slower performance. 
@@ -36,7 +36,7 @@ Recommended network adapter & cable sets:
  - For short cables < 16 ft (5 meters): Direct Attached Copper (DAC) twinax copper cable with QSFP plug (ex: NetApp 112-00177 5 meter cable)
  - For long cables, use fiber optic cables and the corresponding QSFP fiber optic transceiver.
  
-### 10 Gbps (1.25 Megabytes per second)
+### 10 Gbps (1.25 Gigabytes per second)
 If you want to use Ethernet cables, then you can choose the hardware below as a reference. *Note: this guide doesn't include driver or network configuration instructions.*  
 
 PC requirements:
@@ -77,15 +77,15 @@ The Linux kernel in your distribution likely already includes Mellanox support. 
       ```
       auto enp1s0 
       iface enp1s0 inet static 
-      address 10.10.10.1
+      address 10.10.10.10
       netmask 24
       ```
    3. To apply settings, disable and then reenable interface by running `sudo ifdown enp1s0 && sudo ifup enp1s0`
 2. Edit `hosts` file on each PC.  
    Run `sudo nano /etc/hosts` to add new lines for each device using the below format. ex:   
    ```
-   10.10.10.1  homeserver
-   10.10.10.2  desktop
+   10.10.10.10  homeserver
+   10.10.10.20  desktop
    ```
 
 ### Windows
@@ -107,8 +107,8 @@ The Linux kernel in your distribution likely already includes Mellanox support. 
 2. Edit `hosts` file on each PC.   
    Open `C:\Windows\System32\drivers\etc\hosts` file in text editor. At the end of the file, add new lines for each device. Ex:   
    ```
-   10.10.10.1  homeserver
-   10.10.10.2  desktop
+   10.10.10.10  homeserver
+   10.10.10.20  desktop
    ```
 
 ## Connect hardware cables
@@ -155,7 +155,7 @@ Accepted connection from 10.10.8.13, port 56338
       ```
       auto enp1s0 
       iface enp1s0 inet static 
-      address 10.10.10.1
+      address 10.10.10.10
       netmask 24 
       mtu 9000
       ```
