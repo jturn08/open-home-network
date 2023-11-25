@@ -1,43 +1,12 @@
 # Configuring OpenWrt with an essential Wi-Fi network
 - [Configuring OpenWrt with an essential Wi-Fi network](#configuring-openwrt-with-an-essential-wi-fi-network)
-  - [Log into your router running OpenWrt](#log-into-your-router-running-openwrt)
-  - [Test and verify Internet connectivity](#test-and-verify-internet-connectivity)
   - [Setup Wi-Fi Access Point](#setup-wi-fi-access-point)
 
-*If you don't have a Wi-Fi router running OpenWrt yet, then review [Installing OpenWrt on a Wi-Fi router](Installing-OpenWrt-on-a-Wi-Fi-router.md) guide first.*  
+*If you don't have a Wi-Fi router running OpenWrt and connected to the Internet yet, then review [Installing OpenWrt on a Wi-Fi router](Installing-OpenWrt-on-a-Wi-Fi-router.md) guide first.*  
 
-Now that you have OpenWrt running on a Wi-Fi router, the next step is to configure OpenWrt to create a Wi-Fi network so your client devices can connect to the Internet. By default, OpenWrt disables Wi-Fi for security, so you'll need to login to OpenWrt to change Wi-Fi settings.  
-
-To do so, you'll need to complete these steps
-1. Log into your router running OpenWrt
-2. Test and verify internet connectivity
-3. Setup Wi-Fi Access Point
+Now that you have OpenWrt running on a Wi-Fi router and you've verified OpenWrt has Internet connectivity, the next step is to configure OpenWrt to create a Wi-Fi network. By default, OpenWrt disables Wi-Fi for security, so you'll need to login to OpenWrt to change Wi-Fi settings.  
 
 The instructions below are for OpenWrt 22.03 version.
-
-## Log into your router running OpenWrt
-To log into your router, temporarily connect a wired ethernet cable from your computer to the `LAN` ethernet port on your router. Then in a web browser on your computer, navigate to http://192.168.1.1/ or http://openwrt.lan/ address to view the administration web site.  
-
-You should see a login page like this:  
-![Image](OpenWrt-essential-Wi-Fi_1.jpg)
-
-You'll see a reminder that no password is set by default. `root` is the default username for the administrator account in OpenWrt. You can set a  password for the `root` account after you login. Login with username `root` and no password.  
-
-Now you should see the OpenWrt main status page that displays overview of router status.  
-![Image](OpenWrt-essential-Wi-Fi_2.jpg)
-
-The next step is to set a password for the `root` administrator account. Go to to **System → Administration** page.  
-![Image](OpenWrt-essential-Wi-Fi_3.jpg)
-
- Enter a strong password in the "Password" field and repeat it in the "Confirmation" field, then select "Save" button to finalize changes. The next time you login to the Wi-Fi router, you'll need to enter this password.  
-
-For more detailed instructions, see [openwrt.org instructions](https://openwrt.org/docs/guide-quick-start/walkthrough_login)
-
-## Test and verify Internet connectivity
-Connect the wired ethernet cable from your internet modem or gateway to the `WAN` port on your router. OpenWrt by default creates a `LAN` internal wired network and bridges that network to the `WAN` internet behind a firewall.  
-Temporarily connect a wired ethernet cable from your computer to the LAN ethernet port on your router, and open a web browser and verify your computer can access the Internet through OpenWrt.
-
-For more detailed troubleshooting steps, see [openwrt.org Internet troubleshooting](https://openwrt.org/docs/guide-quick-start/checks_and_troubleshooting)
 
 ## Setup Wi-Fi Access Point
 Temporarily connect a wired ethernet cable from your computer to the `LAN` ethernet port on your router and log into your router's OpenWrt administration web page.  
