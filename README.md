@@ -228,14 +228,16 @@ The below guides walks through a typical home Wi-Fi network setup.
 
 1. [Installing OpenWrt on a Wi-Fi router](Installing-OpenWrt-on-a-Wi-Fi-router.md)
 2. [Configuring OpenWrt with an essential Wi-Fi network](Configuring-OpenWrt-with-essential-Wi-Fi-network.md)
-3. Configuring OpenWrt with additional Guest Wi-Fi network
-4. [Configuring a second OpenWrt device as Wi-Fi network bridge (Wi-Fi Repeater) for greater Wi-Fi signal range](https://openwrt.org/docs/guide-user/network/wifi/atheroswds)
+
+Optional:  
+1. [Configuring OpenWrt with additional Guest Wi-Fi network (openwrt.org)](https://openwrt.org/docs/guide-user/network/wifi/guestwifi/configuration_command_line_interface)
+2. [Configuring a second OpenWrt device as Wi-Fi network bridge (Wi-Fi Repeater) for greater Wi-Fi signal range (openwrt.org)](https://openwrt.org/docs/guide-user/network/wifi/atheroswds)
+3. Configured Wireguard VPN
 
 ### Deluxe setup: Wi-Fi and wired network
 In addition to following the steps in the essential setup, the below guides for deluxe setup supports both Wi-Fi and wired ethernet cables.
 
 1. Configuring a second OpenWrt Wi-Fi Access Point connected by wired ethernet cable for greater range and fast performance
-2. Configuring managed wired network switch with VLAN tagging to connect multiple Wi-Fi Access Points with multiple logical networks (ex: home & guest network).
 
 ### Advanced setup: Wi-Fi and wired network with advanced networking
 Instead of following essential and deluxe setup guides, 

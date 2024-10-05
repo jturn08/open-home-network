@@ -4,7 +4,7 @@
   - [Test and verify Internet connectivity](#test-and-verify-internet-connectivity)
   - [Setup Wi-Fi Access Point](#setup-wi-fi-access-point)
 
-*If you don't have a Wi-Fi router running OpenWrt yet, then review [Installing OpenWrt on a Wi-Fi router](Installing-OpenWrt-on-a-Wi-Fi-router.md) guide first.*  
+*If you don't have a Wi-Fi router running [OpenWrt](https://openwrt.org) yet, then review [Installing OpenWrt on a Wi-Fi router](Installing-OpenWrt-on-a-Wi-Fi-router.md) guide first.*  
 
 Now that you have OpenWrt running on a Wi-Fi router, the next step is to configure OpenWrt to create a Wi-Fi network so your client devices can connect to the Internet. By default, OpenWrt disables the Wi-Fi network for security, so you'll need to login to OpenWrt to change Wi-Fi settings.  
 
@@ -13,7 +13,7 @@ To do so, you'll need to complete these steps
 2. Test and verify internet connectivity
 3. Setup Wi-Fi Access Point
 
-The instructions below are for OpenWrt 22.03 version.
+The instructions below are for [OpenWrt 22.03](https://openwrt.org/releases/22.03/start) version.
 
 ## Log into your router running OpenWrt
 To log into your router, temporarily connect a wired ethernet cable from your computer to the `LAN` ethernet port on your router. Then in a web browser on your computer, navigate to http://192.168.1.1/ or http://openwrt.lan/ address to view the administration web site.  
