@@ -6,7 +6,7 @@
 
 *If you don't have a Wi-Fi router running OpenWrt yet, then review [Installing OpenWrt on a Wi-Fi router](Installing-OpenWrt-on-a-Wi-Fi-router.md) guide first.*  
 
-Now that you have OpenWrt running on a Wi-Fi router, the next step is to configure OpenWrt to create a Wi-Fi network so your client devices can connect to the Internet. By default, OpenWrt disables Wi-Fi for security, so you'll need to login to OpenWrt to change Wi-Fi settings.  
+Now that you have OpenWrt running on a Wi-Fi router, the next step is to configure OpenWrt to create a Wi-Fi network so your client devices can connect to the Internet. By default, OpenWrt disables the Wi-Fi network for security, so you'll need to login to OpenWrt to change Wi-Fi settings.  
 
 To do so, you'll need to complete these steps
 1. Log into your router running OpenWrt
@@ -31,13 +31,13 @@ The next step is to set a password for the `root` administrator account. Go to t
 
  Enter a strong password in the "Password" field and repeat it in the "Confirmation" field, then select "Save" button to finalize changes. The next time you login to the Wi-Fi router, you'll need to enter this password.  
 
-For more detailed instructions, see [openwrt.org instructions](https://openwrt.org/docs/guide-quick-start/walkthrough_login)
+For more help, see [openwrt.org instructions](https://openwrt.org/docs/guide-quick-start/walkthrough_login)
 
 ## Test and verify Internet connectivity
 Connect the wired ethernet cable from your internet modem or gateway to the `WAN` port on your router. OpenWrt by default creates a `LAN` internal wired network and bridges that network to the `WAN` internet behind a firewall.  
 Temporarily connect a wired ethernet cable from your computer to the LAN ethernet port on your router, and open a web browser and verify your computer can access the Internet through OpenWrt.
 
-For more detailed troubleshooting steps, see [openwrt.org Internet troubleshooting](https://openwrt.org/docs/guide-quick-start/checks_and_troubleshooting)
+For more help, see [openwrt.org Internet troubleshooting](https://openwrt.org/docs/guide-quick-start/checks_and_troubleshooting)
 
 ## Setup Wi-Fi Access Point
 Temporarily connect a wired ethernet cable from your computer to the `LAN` ethernet port on your router and log into your router's OpenWrt administration web page.  
@@ -63,3 +63,5 @@ For each of your radios, you can create a Wi-Fi network by selecting `Add` butto
    6. Select "Save & Apply" button to apply changes. 
 
 Now on your client device, open Wi-Fi settings, find the new Wi-Fi network you created, and enter the Wi-Fi password, and connect to the network.
+
+For more help, see [openwrt.org Enabling a Wi-Fi access point on OpenWrt](https://openwrt.org/docs/guide-quick-start/basic_wifi)
